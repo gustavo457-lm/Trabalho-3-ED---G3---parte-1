@@ -1,7 +1,7 @@
 def navegar(hist):
-    index = len(historico) - 1
+    index = len(hist) - 1
     while True:
-        print(f"SITE ATUAL: {historico[index]}")
+        print(f"SITE ATUAL: {hist[index]}")
         print("-" * 20)
 
         print("1. Avançar\n2. Adicionar novo site\n3. Voltar\n4. Sair\n")
@@ -10,8 +10,8 @@ def navegar(hist):
         if opcao == 1:
             index += 1
         elif opcao == 2:
-            historico.append(input("Digite a URL do site: "))
-            index = len(historico) - 1
+            hist.append(input("Digite a URL do site: "))
+            index = len(hist) - 1
         elif opcao == 3:
             index -= 1
         elif opcao == 4:
@@ -19,7 +19,7 @@ def navegar(hist):
         else:
             print("Digite um dígito válido")
 
-        if index >= len(historico):
+        if index >= len(hist):
             print("Não é possível avançar mais!")
             index -= 1
         if index < 0:
